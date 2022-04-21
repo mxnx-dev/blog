@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from "next/link"
 import styles from '../styles/Home.module.css'
 import { getAllFilesMetadata } from '../lib/mdx'
+import Header from '../sections/Header'
 
 export default function Home( {posts} ) {
   return (
@@ -14,7 +15,10 @@ export default function Home( {posts} ) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Manuel Blog</h1>
+        <header>
+          <Header></Header>
+         <h1 className={styles.title}>Mxnx Blog</h1>
+        </header>
 
         <div className={styles.grid}>
           {posts.map(post => (
